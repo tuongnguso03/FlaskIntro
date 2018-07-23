@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Phim hot nhất hè 2k18</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    {% for movie in movies %}
+        <h1>{{movie.big_title}}</h1>
+        <h3>Casts:</br></h3>
+        {% for cast in movie.casts %}
+            <h4>{{cast}}</h4>
+            
+        
+        {% endfor %}
+        
+        <img src="{{movie.thumbnail_url}}" alt="Image">
+        </br>
+        <a href="{{movie.link}}">Link phun HD</a>
+    {% endfor %}    
+</body>
+</html>

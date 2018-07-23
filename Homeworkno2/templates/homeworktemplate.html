@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ma Hobby</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>hobby.name</h1>
+    {% for info in hobby.infos %}
+        <h2>{{info}}</h2>
+        
+        <h3>{{hobby.infos[info]["information"]}}</h3>
+        
+        <img src="{{hobby.infos[info]['pics']}}" alt="Image">
+        </br>
+        <a href="{{hobby.infos[info][link]}}">Link to further information about {{info}}</a>        
+    {% endfor %}
+</body>
+</html>
